@@ -1,0 +1,67 @@
+@media print {
+    header {
+        .topBar {
+            display: block;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 1rem 0;
+
+            .header-icons {
+                display: none;
+            }
+
+            .topHeaderTxt {
+                width: 100%;
+                max-width: none;
+                flex: none;
+                text-align: center;
+            }
+        }
+
+        .header-wrapper {
+            * {
+                display: none;
+            }
+
+            .header-logo {
+                display: block;
+                margin: 0 auto;
+
+                img {
+                    display: block;
+                }
+            }
+
+            .header-icons {
+                display: none;
+            }
+        }
+    }
+
+    .breadcrumb,
+    .sidebarCol {
+        display: none;
+    }
+
+    .contentCol {
+        flex: none;
+        display: block;
+        width: 100%;
+        max-width: none;
+    }
+
+    .mainImgWrap {
+        display: none;
+    }
+
+    .lessonSmallDescribtion {
+        .socials {
+            display: none;
+        }
+    }
+
+    footer {
+        display: none;
+    }
+
+}

@@ -1,0 +1,89 @@
+.blog-listing {
+    font-size: 16px;
+
+    @include mq(lg) {
+        padding-left: 0;
+    }
+
+    @include mq(md) {
+        margin-bottom: emCal(16, 50);
+    }
+
+    @include mq(sm) {
+        font-size: 15px;
+    }
+
+    &-category-form {
+        padding: 30px;
+
+        &_h1 {
+            font-size: 36px;
+            font-weight: 700;
+
+            background-color: #d9cece;
+            border: 1px dashed #000;
+            padding: 0.5rem 1rem;
+        }
+
+        &_h3 {
+            padding-top: 15px;
+            font-size: 22px;
+            font-weight: 400;
+            font-family: $bodyFont;
+        }
+
+        &_category {
+            h1 {
+                font-size: 18px;
+                font-family: $bodyFont;
+                font-weight: 700;
+                padding: 0px 0px 15px 0px;
+                width: 100%;
+                position: relative;
+            }
+
+            h1::after {
+                content: '';
+                position: absolute;
+                top: 5px;
+                margin-left: 10px;
+                width: 60%;
+                height: 2px;
+                background-color: gainsboro;
+
+            }
+
+
+            .category {
+                margin-bottom: emCal(16, 15);
+
+
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &_form {
+            margin-top: emCal(14, 50);
+        }
+    }
+
+    &_add {
+        margin: 20px 0px;
+        height: 280px;
+        width: 100%;
+        background-color: $blueDark;
+        color: white;
+        font-size: 30px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.gray-bg {
+    background-color: $grayLight;
+}

@@ -1,0 +1,249 @@
+footer {
+  font-size: 16px;
+
+  .footer-content {
+    // padding: remCal(80) 0 remCal(60);
+    padding: 3rem 0 3.75rem;
+
+    .footer-col {
+      @include mq(lg) {
+        margin-bottom: emCal(16, 40);
+      }
+
+      &__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: emCal(16, 40);
+        font-size: 16px;
+
+        h5 {
+          @include typo($fsz: emCal(16, 18), $up: true);
+          margin-right: emCal(16, 15);
+        }
+
+        &:after {
+          content: '';
+          height: 1px;
+          flex-grow: 1;
+          display: block;
+          background-color: #e1e1e1;
+        }
+      }
+
+      &.-about {
+        p {
+          @include typo($fsz: emCal(16, 15), $lh: emCal(15, 26), $fw: 400, $color: setSchemaColor(gray, medium));
+        }
+
+        .contact-method {
+          margin-top: 15px;
+
+          p {
+            i {
+              width: 8px;
+              margin-right: emCal(16, 21);
+              color: setColor(primary);
+              text-align: center;
+              font-size: emCal(16, 15);
+            }
+          }
+        }
+      }
+
+      &.-util {
+        .tags-group {
+          margin-bottom: emCal(16, 35 - 15);
+          margin-right: emCal(16, -15);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    // padding: emCal(16, 25);
+    padding: .5rem 0;
+    border-top: 1px solid setSchemaColor(gray, light);
+    text-align: center;
+    @include typo($fsz: emCal(16, 14), $fw: 400, $lh: emCal(14, 20));
+  }
+
+  $theme: 'secondary', 'third', 'fourth';
+
+  @each $color in $theme {
+    &.-theme--#{$color} {
+      .footer-content {
+        .footer-col {
+          &.-about {
+            .contact-method {
+              p {
+                i {
+                  color: setColor($color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .footerContentContainer {
+    background-color: $blueDark;
+    color: $white;
+    text-align: center;
+
+    h4 {
+      font-family: $bodyFont;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-top: 1rem;
+      padding-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .footerLogoWrapper {
+      height: 120px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-height: 97px;
+        width: auto;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: .75rem;
+      line-height: 1.2rem;
+      margin: 0 2rem;
+    }
+
+  
+
+    .fev,
+    .cia {
+      a {
+        text-transform: uppercase;
+        margin-top: 1.2rem;
+        font-size: .75rem;
+        display: block;
+        color: $blueLight;
+        text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+      }
+    }
+
+    .newsletterCol {
+      background: url(/francais-et-vous/assets/images/icons/newsletter-icon.png) no-repeat right 1rem;
+      margin-top: 2rem;
+      padding-left: 1.5rem;
+
+      .newsletterLinks {
+        a {
+          display: block;
+          padding: 1rem 1.5rem;
+          color: $white;
+          border: 1px solid $white;
+          text-decoration: none;
+          margin-bottom: 1.5rem;
+          text-align: left;
+          font-size: .69rem;
+          text-transform: uppercase;
+          transition: all .25s;
+
+          i {
+            float: right;
+            font-size: .9rem;
+          }
+
+          &:hover {
+            background-color: $blueLight;
+            border-color: $blueLight;
+          }
+        }
+      }
+
+
+      .followUs {
+        h5 {
+          margin-top: 1.5rem;
+          text-align: left;
+          font-size: .875rem;
+          text-transform: uppercase;
+          font-family: $bodyFont;
+          font-weight: 400;
+          padding-bottom: 1.5rem;
+        }
+
+        .social {
+          text-align: left;
+
+          a, .btn, .btn span {
+            color: $white;
+            font-size: 1rem;
+            display: inline-block;
+            &:hover {
+              i {
+                color: $white;
+                svg {
+                  color: $white !important;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyRightContainer {
+    .copyright {
+      p {
+        color: $grayDark;
+        text-transform: uppercase;
+        font-size: .75rem;
+
+        span {
+          font-weight: 600;
+        }
+
+        a {
+          color: $grayDark;
+          padding: 0 1rem;
+          display: inline-block;
+
+          &:hover {
+            color: $blueDark;
+          }
+
+          &.creation {
+            font-weight: 600;
+            span {
+              font-weight: 400;
+            }
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+ 
+  footer .footerContentContainer .newsletterCol {
+    margin-top: 3rem !important;
+    padding-left: 0;
+  }
+}

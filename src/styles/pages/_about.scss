@@ -1,0 +1,139 @@
+.about-us {
+  font-size: 16px;
+  margin-bottom: remCal(70);
+
+
+  &__image {
+    width: 100%;
+    padding-right: emCal(16, 30);
+
+
+    @include mq(md) {
+      margin-bottom: emCal(16, 30);
+      padding-right: 0;
+    }
+
+
+    img {
+      @include imgCenter;
+    }
+  }
+
+
+  &__content {
+    h3 {
+      @include typo($fsz: emCal(16, 30), $fw: 700);
+      margin-bottom: emCal(30, 35);
+    }
+
+
+    p {
+      @include typo($fsz: emCal(16, 15), $lh: emCal(15, 27), $fw: 400);
+      margin-bottom: emCal(15, 30);
+    }
+
+
+    .follow {
+      p {
+        @include typo($fsz: emCal(16, 15), $fw: 600);
+      }
+    }
+  }
+}
+
+
+.aboutPage {
+  .imgWrapper {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  p {
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .intro {
+    margin-bottom: 2rem;
+
+
+    h1 {
+      font-family: $bodyFont;
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+    }
+
+
+    p {
+      margin-bottom: 1rem;
+
+    }
+
+  }
+
+  .signature {
+    text-align: center;
+    padding: 2rem 0;
+    line-height: 1.4rem;
+
+    span,
+    strong {
+      font-weight: 600;
+      display: block;
+      font-family: $titleFont;
+      padding-bottom: .5rem;
+    }
+
+  }
+
+
+  .brief {
+    >.row {
+      align-items: center;
+    }
+
+
+    h5 {
+      font-family: $bodyFont;
+      padding-bottom: .25rem;
+    }
+  }
+
+  .adv {
+    margin: 3rem 0;
+  }
+
+
+
+
+  blockquote {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+    margin: 2rem 10%;
+    font-style: italic;
+
+    &:before {
+      content: open-quote;
+      font-size: 2em;
+      line-height: 0.1em;
+      margin-right: 0.25rem;
+      vertical-align: -0.4em;
+    }
+
+    &:after {
+      content: close-quote;
+      font-size: 2em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+      float: right;
+      clear: both;
+    }
+
+    p {
+      padding-left: 1.5rem;
+    }
+  }
+
+}

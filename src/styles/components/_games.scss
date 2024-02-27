@@ -1,0 +1,275 @@
+.game-listing {
+    .game-content {
+        &_header {
+            h1 {
+                @include typo($fsz: 36px, $fw: 700, $fm: $bodyFont);
+                line-height: 60px;
+            }
+
+            p {
+                @include typo($fsz: 20px, $fw: 400, $fm: $bodyFont);
+                line-height: 1.5rem;
+                padding: 15px 0px;
+                font-size: 1rem;
+            }
+
+        }
+
+        &_games {
+            padding: 20px 0px;
+            overflow-y: hidden;
+        }
+    }
+
+}
+
+.game-component {
+    height: 100%;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    &-yellow {
+        background-color: $lightYellow;
+
+    }
+
+    &-gray {
+        background-color: $grayLight;
+
+    }
+
+    &_image {
+        border-radius: 5px;
+
+    }
+
+    &_content {
+        margin-top: 10px;
+
+        h1 {
+            @include typo($fsz: 24px, $fw: 700);
+            padding: 10px 0px;
+            padding-top: 1rem;
+        }
+
+        p {
+            @include typo($fsz: 15px, $fw: 400, $color: #3b3b3b);
+            padding: 10px 0px;
+        }
+
+        &-more {
+            button {
+                padding: 5px;
+                @include typo($fsz: 14px, $fw: 700, $fm: $bodyFont);
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                background-color: white;
+                color: $yellow;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                margin-top: 1rem;
+                transition: all .2s;
+                padding-left: 1rem;
+
+                & svg {
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+
+                &:hover {
+                    background-color: $yellow;
+                    color: $white;
+                    letter-spacing: 1px;
+                }
+
+            }
+
+            &_bottom {
+                float: right;
+            }
+
+            &_top {
+                position: absolute;
+                right: 10px;
+                top: 20px;
+            }
+        }
+    }
+
+    &_games {
+        &-open {
+            height: 100%;
+            opacity: 1;
+        }
+
+        &-close {
+
+            height: 0;
+            opacity: 0;
+        }
+
+        max-width: 80%;
+        margin: 0 auto;
+        // padding: 20px 0px;
+        // transition: height 1s ease-in-out;
+
+        &-category {
+            padding: 30px 0px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            // justify-content: center;
+
+            &_title {
+                display: block;
+                text-align: right;
+
+                span {
+                    @include typo($fsz: 20px, $fw: 700, $fm: $bodyFont);
+                    color: $yellow;
+                    background-color: $white;
+                    padding: 10px;
+                    border-radius: 999px;
+                }
+
+            }
+
+            &_heading {
+                @include typo($fsz: 18px, $fw: 700, $fm: $bodyFont);
+
+            }
+        }
+    }
+}
+
+.game-sidebar {
+    &_popular {
+        position: relative;
+
+        h1 {
+            @include typo($fsz: 22px, $fw: 700);
+            margin: 20px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 7px;
+                margin-left: 10px;
+                width: 60%;
+                height: 2px;
+                background-color: gainsboro;
+            }
+        }
+    }
+}
+
+.game-detail {
+    &_content {
+        &-heading {
+            margin: 30px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                @include typo($fsz: 36px, $fm: $titleFont, $fw: 700);
+
+            }
+
+            span {
+                min-width: 150px;
+                padding: 10px;
+                background-color: $yellow;
+
+            }
+
+        }
+
+        &-detail {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+
+            @include mq(sm) {
+                grid-template-columns: 1fr
+            }
+
+            &_image {
+                border-radius: 5px;
+            }
+
+            &_card {
+                width: 100%;
+                background-color: $lightYellow;
+                min-height: 220px;
+                border-radius: 5px;
+
+                &-header {
+                    width: 100%;
+                    padding: 0px !important;
+                    background-color: $yellow;
+                    border-radius: 5px 5px 0px 0px;
+
+                    &-content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 20px 10px;
+
+                        h1 {
+                            @include typo($fsz: 28px, $fm: $bodyFont, $fw: 700);
+                        }
+
+                        span {
+                            @include typo($fsz: 20px, $fw: 700, $fm: $bodyFont);
+                            color: $yellow;
+                            background-color: $white;
+                            padding: 10px;
+                            border-radius: 999px;
+                        }
+
+                    }
+
+                }
+
+                &-content {
+                    padding: 30px 10px;
+
+
+                    p {
+                        @include typo($fsz: 18px, $fw: 400, $fm: $bodyFont);
+                        line-height: 32px;
+                    }
+
+                    b {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &-view {
+            // padding: 0px !important;
+            margin-top: 30px;
+            min-height: 600px;
+            background-color: $grayLight;
+            border-radius: 5px;
+
+            &_game {
+
+                iframe {
+                    min-height: 700px;
+                    min-width: 100%;
+                    background-color: $white;
+                    border-radius: 5px;
+                }
+
+            }
+        }
+    }
+}

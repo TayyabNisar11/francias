@@ -1,0 +1,175 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$titleFont: 'Playfair Display', serif;
+$bodyFont: 'Montserrat', sans-serif;
+
+
+// colors
+$white: #ffffff;
+$black: #000000;
+
+$blueDark: #112154;
+$blueLight: #4f6fd2;
+$blueLighter: #e2e9ff;
+
+
+$grayDark: #393939;
+$grayLight: #f7f7f7;
+
+$yellow: #f3c538;
+$lightYellow: #FCF3D5;
+$orange: #f46f59;
+$green: #3bc7b0;
+$greenLight: #d8f4ef;
+$greenDarker: #2d9786;
+
+$redLight: #f36f5a;
+
+
+
+
+
+.date {
+    color: $grayDark;
+    font-size: .9rem;
+
+    i {
+        color: $orange;
+        margin-right: .5rem;
+    }
+}
+
+// Tags
+.tag {
+    color: $white;
+    padding: .25rem 1rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    max-width: fit-content;
+}
+
+.blogTag {
+    background-color: $orange;
+}
+
+.lessonTag {
+    background-color: $green;
+}
+
+.gameTag {
+    background-color: $yellow;
+}
+
+.durationTag {
+    background-color: $white;
+    color: $green;
+    display: inline-block;
+
+    i {
+        margin-right: .5rem;
+    }
+}
+
+
+// .buttons
+.btnArrowRight {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    background-color: $orange;
+    color: $white;
+    border-radius: 5px;
+    font-size: .9rem;
+    transition: all .25s;
+
+    &:after {
+        margin-left: 1.5rem;
+        font-family: "Font Awesome 5 Pro";
+        content: "\f178";
+        display: inline-block;
+        transition: all .25s;
+    }
+
+    &:hover {
+        @extend .boxShadow;
+
+        &:after {
+            margin-left: 1rem;
+            margin-right: .5rem;
+        }
+    }
+}
+
+
+
+// article Items
+.items {
+    li {
+        margin-bottom: 3rem;
+
+        .imgWrap {
+            max-height: 220px;
+            overflow: hidden;
+            border-radius: 10px;
+            @extend .flashHover;
+            margin-bottom: 1.25rem;
+
+        }
+
+        .itemDescription {
+            display: block;
+
+            .titleWrap {
+                margin-top: 1.5rem;
+
+                h3 {
+                    margin-bottom: .5rem;
+                    font-size: 1rem;
+                    min-height: 2rem;
+                    font-weight: 900;
+
+                    font-family: $bodyFont;
+
+                    a {
+                        color: $grayDark;
+                        font-weight: 700;
+
+                        &:hover {
+                            color: $blueDark;
+                        }
+                    }
+                }
+            }
+
+            .describtionWrap {
+                padding-bottom: 2rem;
+                color: $grayDark;
+                line-height: normal;
+
+                p,
+                a {
+                    font-size: 1rem;
+                    // line-height: normal;
+                }
+
+                p {
+                    padding-top: 1rem;
+                }
+
+                a {
+                    display: inline-block;
+                    margin-top: 1.2rem;
+                    color: $orange;
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

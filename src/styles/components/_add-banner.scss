@@ -1,0 +1,86 @@
+.add-banner {
+    position: relative;
+    background-color: $blueDark;
+    padding: remCal(40);
+    border-radius: remCal(10);
+    display: flex;
+    justify-content: space-between;
+
+    // flex-direction: column;
+
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 280px;
+
+        h1 {
+            @include typo($fsz: 36px, $fw: 700, $color: $white, $fm: $bodyFont)
+        }
+
+        p {
+            @include typo($fsz: 17px, $fw: 300, $color: #dedede, $fm: $bodyFont)
+        }
+    }
+
+    &_image {
+        background-image: url('/francais-et-vous/assets/images/components/add-banner/add.png');
+        min-height: 200px;
+        max-width: 300px;
+        background-size: cover;
+
+        // @include mq(xl) {
+        //     height: 100px;
+        //     width: 300px;
+        //     background-size: cover;
+        // }
+
+    }
+}
+
+
+.subscribeBanner {
+    
+    .wrapper {
+        background-color: $blueDark;
+        color: $white;
+        padding: 1.5rem 1rem;
+        border-radius: 5px;
+    }
+    h3 {
+        font-family: $bodyFont;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    p {
+        line-height: 1.2rem;
+        font-size: .9rem;
+    }
+    
+    .imgWrap {
+        text-align:right;
+        margin: 2rem 0;
+        img {
+            max-height: 100px;
+        }
+    }
+
+    .btn {
+        margin-top: 2rem;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+        background-color: $white;
+        transition: all .25s;
+        color: $blueDark;
+
+        &:hover {
+            background-color: $grayLight;
+            letter-spacing: 1px;
+        }
+    }
+    
+}

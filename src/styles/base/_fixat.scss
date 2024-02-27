@@ -1,0 +1,181 @@
+.hide {
+    display: none !important;
+}
+
+.blog-listing {
+    .main-post_content-date p {
+        padding-bottom: 0;
+    }
+
+    .main-post_content-category {
+        margin-bottom: 1rem;
+    }
+
+    .postTitleLink {
+        padding-top: 1.5rem;
+        display: block;
+    }
+}
+
+
+.categorySquares {
+    .category {
+        &.-bar {
+            background-color: $orange;
+            transition: all .5s;
+            // background: $orange url(/francais-et-vous/assets/images/icons/icon-books.png) no-repeat left top;
+            // background-size: cover;
+
+            &::before {
+                content: "";
+                background: url(/francais-et-vous/assets/images/icons/icon-books.png) no-repeat left top;
+                background-size: cover;
+                opacity: 0.1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+                transition: all .5s;
+            }
+
+            &:after {
+                content: "";
+                width: 80px;
+                height: 80px;
+                display: block;
+                background: url(/francais-et-vous/assets/images/icons/icon-books.png) no-repeat center center;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 1rem;
+                transition: all .5s;
+            }
+
+            &.musique-bar {
+                &::before {
+                    background: url(/francais-et-vous/assets/images/icons/icon-music.png) no-repeat left top;
+                    background-size: cover;
+                }
+
+                &:after {
+                    background: url(/francais-et-vous/assets/images/icons/icon-music.png) no-repeat center center;
+                }
+            }
+
+
+            &.edito-bar {
+                &::before {
+                    background: url(/francais-et-vous/assets/images/icons/icon-mag.png) no-repeat left top;
+                    background-size: cover;
+                }
+
+                &:after {
+                    background: url(/francais-et-vous/assets/images/icons/icon-mag.png) no-repeat center center;
+                }
+            }
+
+
+
+            &.cinema-bar {
+                &::before {
+                    background: url(/francais-et-vous/assets/images/icons/icon-video.png) no-repeat left top;
+                    background-size: cover;
+                }
+
+                &:after {
+                    background: url(/francais-et-vous/assets/images/icons/icon-video.png) no-repeat center center;
+                }
+            }
+
+
+            &.litterature-bar {
+                &::before {
+                    background: url(/francais-et-vous/assets/images/icons/icon-books.png) no-repeat left top;
+                    background-size: cover;
+                }
+
+                &:after {
+                    background: url(/francais-et-vous/assets/images/icons/icon-books.png) no-repeat center center;
+                }
+            }
+
+            &:hover {
+                letter-spacing: 1px;
+
+                &::before {
+                    opacity: 0.12;
+                }
+
+                &:after {
+                    right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.post-card .card-content__info > div p {
+    padding-bottom: 0;
+}
+.post-standard #post-share h5 {
+    font-size: .76rem;
+}
+.post-standard #post-share .social-block {
+    justify-content: center;
+ }
+.post-standard #post-share .social-block > a {
+    display: block;
+    margin: 0.5rem auto;
+}
+.post-standard__content p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.post-trending-content {
+   .tag {
+    margin-bottom: .5rem;
+   } 
+}
+@media only screen and (min-width: 768px) {
+    .post-trending {
+        display: block;
+        margin-bottom: 2rem !important;
+        .post-trending-image {
+            width: auto;
+            height: auto;
+        }
+        .post-trending-content .tag {
+            margin-top: 1rem;
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .post-card.-full .card-content .card-content__info-item {
+        margin-right: 1.5rem;
+    }
+
+    .newsletter-content {
+        padding-right: 0;
+    }
+    .exercises-content_levels .tagsWrapper {
+        display: block;
+        a {
+            display: block;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .search_content {
+        margin-bottom: 2rem;
+    }
+  
+}
+
+// Temp nav font-size
+header .header-wrapper nav ul>li>a {
+    font-size: .7rem;
+}

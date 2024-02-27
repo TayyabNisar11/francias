@@ -1,0 +1,18 @@
+.training-courses {
+    background-color: $blueDark;
+    padding: remCal(40);
+    border-radius: remCal(10);
+    display: flex;
+    flex-direction: column;
+    gap: remCal(40);
+
+    h1 {
+        @include typo($fsz: 24px, $fw: 700, $color: $white , $fm: $bodyFont);
+
+    }
+
+    p {
+        @include typo($fsz: 15px, $fw: 300, $color: $white, $fm: $bodyFont);
+        line-height: 22px;
+    }
+}

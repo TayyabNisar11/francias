@@ -1,0 +1,61 @@
+.resourcesPage {
+    .pageHeader {
+        margin-bottom: 2rem;
+
+        h3 {
+            font-weight: 600;
+        }
+    }
+}
+
+.exercises-content {
+    p {
+        font-weight: 500;
+
+        a {
+            color: $blueLight;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+
+.exercises-content_levels {
+    .resourcesRow {
+        padding-bottom: 1rem;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .subjectLabel {
+        font-weight: 700;
+    }
+
+    .tagsWrapper {
+        display: flex;
+
+        .tag {
+            &:nth-child(1) {}
+
+            &:nth-child(2) {
+                background-color: $blueLight;
+            }
+        }
+    }
+}
+
+.contenuContainer {
+    .downloadFormWrapper {
+        margin: 0 15%;
+    }
+    .advContainer {
+        margin: 3rem 0;
+    }
+}

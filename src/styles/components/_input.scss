@@ -1,0 +1,42 @@
+.input {
+
+    @include input($pd: emCal(14, 15) emCal(14, 20), $width: 100%, $brd: emCal(14, 5));
+
+}
+
+.inputError {
+    border: 1px solid $redLight  !important;
+}
+
+input[type=checkbox] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    background-clip: content-box;
+    border: 1.5px solid #bbbbbb;
+    border-radius: 6px;
+    background-color: #e7e6e7;
+
+    &:checked {
+        background-color: $blueDark;
+        color: #fff;
+    }
+}
+
+.search-input {
+    position: relative;
+
+    input {
+        @extend .input;
+    }
+
+    i {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 22px;
+        font-weight: bold;
+
+    }
+}

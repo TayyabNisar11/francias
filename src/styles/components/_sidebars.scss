@@ -1,0 +1,65 @@
+// relatedPosts
+.relatedPosts {
+    margin: 2rem 0;
+
+    .blockTitle {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 1.2rem;
+
+        h4 {
+            font-family: $bodyFont;
+            font-weight: 600;
+
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        i {
+            flex: 1;
+            height: 2px;
+            background-color: $grayLight;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+    }
+
+    ul {
+        li {
+            margin-bottom: 1.5rem;
+
+            .imageWrap {
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .tagWrap {
+                .tag {
+                    font-size: .7rem;
+                }
+            }
+
+            .postTitle {
+                margin-top: .5rem;
+
+                h3 {
+                    font-size: 1.1rem;
+                    font-family: $bodyFont;
+                }
+
+                a {
+                    color: $grayDark;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+
+        }
+    }
+}

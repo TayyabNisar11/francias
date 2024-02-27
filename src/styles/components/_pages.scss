@@ -1,0 +1,163 @@
+.pageHeader {
+    padding: 2rem;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    height: 170px;
+    vertical-align: middle;
+
+    h1 {
+        @include typo($fsz: 2rem, $fm: $bodyFont, $fw: 700, $color: $white);
+        letter-spacing: 1px;
+        padding: 5px 0px;
+    }
+
+    h3 {
+        margin-top: 15px;
+        @include typo($fsz: 1.5rem, $fm: $bodyFont, $fw: 400, $color: $white);
+    }
+}
+
+
+.newsletterImage {
+    display: block;
+    background: $blueDark url('/francais-et-vous/assets/images/icons/subscribe.png') no-repeat right bottom;
+    background-size: contain;
+    transition: all .35s;
+}
+
+.guideImage {
+    display: block;
+    background: $green url('/francais-et-vous/assets/images/icons/guide.png') no-repeat right bottom;
+    background-size: contain;
+    transition: all .35s;
+}
+
+.exerciseImage {
+    display: block;
+    background: $yellow url('/francais-et-vous/assets/images/icons/excercise.png') no-repeat right bottom;
+    background-size: contain;
+    transition: all .35s;
+}
+
+.telechargeButton {
+    margin: 6rem 0px;
+
+    .downloadIcon {
+        font-size: 22px;
+        color: #fff;
+    }
+}
+
+.newsletter {
+    &-add {
+        max-width: 80%;
+        margin: 3rem auto;
+    }
+
+    &-content {
+        padding-right: 6rem;
+
+        p {
+            padding: 1.5rem 0px;
+            @include typo($fsz: 16px, $fm: $bodyFont, $fw: 600)
+        }
+
+        &_form {
+            p {
+
+                @include typo($fsz: 14px, $fw: 700, $fm: $bodyFont, $color: $blueLight);
+            }
+
+            div {
+                row-gap: 2rem;
+            }
+
+        }
+    }
+}
+
+.guide {
+    &-feature {
+        h1 {
+            font-size: 18px;
+            font-family: $bodyFont;
+            font-weight: 700;
+            padding: 0px 0px 15px 0px;
+            width: 100%;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            margin-left: 10px;
+            width: 60%;
+            height: 2px;
+            background-color: gainsboro;
+
+        }
+    }
+}
+
+.exercises {
+    &-content {
+        p {
+            @include typo($fsz: 18px, $fm: $bodyFont, $fw: 400);
+            line-height: 32px;
+        }
+
+        &_levels {
+            padding: 20px;
+            max-width: 500px;
+            max-height: 300px;
+            background-color: #fff;
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+
+        }
+    }
+
+    h4 {
+        @include typo($fsz: 22px, $fm: $bodyFont, $fw: 700);
+    }
+}
+
+.formation {
+    &-content {
+        &_details {
+            &-title {
+
+
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    @include typo($fsz: 22px, $fw: 700, $fm: $bodyFont);
+                    gap: 5px;
+                }
+
+                & svg {
+                    @include typo($fsz: 36px);
+                }
+
+            }
+
+            &-description {
+
+                p {
+                    @include typo($fsz: 18px, $fw: 400, $fm: $bodyFont);
+                    line-height: 33px;
+                    padding: 15px 0px;
+                }
+            }
+
+            &-p {
+                @include typo($fsz: 18px, $fw: 600, $fm: $bodyFont);
+                line-height: 33px;
+                padding: 2rem 0px;
+            }
+        }
+
+    }
+}

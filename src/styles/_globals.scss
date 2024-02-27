@@ -1,0 +1,281 @@
+.featuredTabsSection {
+    margin: 7rem 0;
+    margin-bottom: 4rem;
+
+    .tabsTitles {
+        :global(ul), .react-tabs__tab-list, > ul {
+            text-align: center;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5%;
+            margin-bottom: 0;
+
+            li {
+                text-align: left;
+                border: none;
+                padding-bottom: 0;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    background-color: $blueLight;
+                    margin-top: 1rem;
+                    opacity: 0;
+                    transition: all .4s;
+                }
+
+                &:nth-child(1) {
+                    &:after {
+                        background-color: $green;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &:after {
+                        background-color: $orange;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &:after {
+                        background-color: $yellow;
+                    }
+                }
+
+
+                &.react-tabs__tab--selected {
+                    font-weight: 600;
+
+                    h4 {
+                        font-size: .9rem;
+
+                        span {
+                            font-weight: 600;
+
+                        }
+                    }
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                .tabTitle {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-right: 1rem;
+                        max-height: 40px;
+                    }
+
+                    h4 {
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        font-family: $bodyFont;
+                        font-size: .9rem;
+
+                        span {
+                            display: block;
+                            font-size: 1.2rem;
+                            text-transform: none;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+    .tabsDetials {
+        background-color: $grayLight;
+        padding: 3rem 0 1rem 0;
+
+        :global(.react-tabs__tab-panel) {
+            .pannelWrap {
+                .intro {
+                    text-align: center;
+                    padding-bottom: 3.5rem;
+
+                    h3 {
+                        font-size: 2.6rem;
+                        font-weight: 700;
+                        padding-bottom: 1.2rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        line-height: 1.7rem;
+
+                    }
+                }
+
+                .items {
+                    li {
+                        &.featuredItem {
+                            margin-bottom: 1.5rem;
+
+                            >.row {
+                                margin-right: 5px;
+                            }
+
+                            .imgWrap {
+                                max-height: 320px;
+                                margin-bottom: 0;
+                                display: flex;
+                                align-items: center;
+                                min-height: 100%;
+                                border-radius: 10px 0 0 10px;
+                                background-color: #fff;
+
+
+                                img {
+                                    // min-height: 100%;
+                                }
+
+                            }
+
+                            .itemPhoto {
+                                padding-right: 0;
+
+                            }
+
+                            .itemDescription {
+                                background-color: $white;
+                                border-radius: 0 10px 10px 0;
+                                @extend .boxShadow;
+                                padding: 1rem;
+                                padding-left: 2rem;
+
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+
+                                .tagWrap {
+                                    text-align: right;
+                                }
+
+                                .titleWrap {
+                                    padding-top: 1rem;
+
+                                    h4 {
+                                        text-transform: uppercase;
+                                        font-family: $bodyFont;
+                                        margin-bottom: .6rem;
+                                    }
+
+                                    h3 {
+                                        padding-bottom: 1.2rem;
+                                        font-family: $bodyFont;
+                                        font-weight: 700;
+                                        line-height: normal;
+                                        color: $grayDark;
+                                        font-size: 1.4rem;
+
+                                    }
+                                }
+
+
+                            }
+                        }
+
+                        .imgWrap {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            img {
+                                width: 100%;
+                            }
+
+                            .levelWrap {
+                                text-align: right;
+                                position: absolute;
+                                top: 1rem;
+                                right: 1rem;
+                                left: 1rem;
+
+                                .level {
+                                    background-color: $white;
+                                    color: $yellow;
+                                    font-weight: 600;
+                                    font-size: 1.2rem;
+                                    border-radius: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 0.5rem;
+                                    opacity: .95;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.lessonsTab {
+                    .blogTag {
+                        background-color: $green;
+                    }
+
+                    .date i {
+                        color: $green;
+                    }
+
+                    .items li .itemDescription .describtionWrap a {
+                        color: $green;
+                    }
+
+                    .actionsContainer a {
+                        background-color: $green;
+                    }
+                }
+
+
+                &.blogTab {}
+
+                &.gamesTab {
+                    .blogTag {
+                        background-color: $yellow;
+                    }
+
+                    .titleWrap h4 {
+                        color: $yellow;
+                        text-transform: uppercase;
+                        font-family: $bodyFont;
+                        margin-bottom: .5rem;
+                        font-size: 1rem;
+                    }
+
+                    .date i {
+                        color: $yellow;
+                    }
+
+                    .items li .itemDescription .describtionWrap a {
+                        color: $yellow;
+                    }
+
+                    .actionsContainer a {
+                        background-color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .actionsContainer {
+        padding: 2rem 0;
+        margin-top: 2rem;
+        text-align: center;
+
+        
+    }
+}
+

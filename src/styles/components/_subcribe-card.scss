@@ -1,0 +1,73 @@
+.subcribe-card {
+  font-size: 16px;
+  padding: emCal(16, 40);
+  background-color: setColor(secondary);
+  color: setColor(light);
+
+  border-radius: emCal(16, 5);
+
+  h5 {
+    @include typo($color: light, $fm: $bodyFont, $fsz: 20px, $fw: 700, $up: true, $lh: 35px);
+    margin-bottom: 20px;
+  }
+
+  p {
+    @include typo($color: light, $fm: $bodyFont, $fsz: 14px, $lh: 25px, $fw: 400);
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    margin-bottom: emCal(16, 20);
+
+    input {
+      @include input($pd: emCal(16, 15) emCal(16, 20));
+      border-radius: emCal(16, 5);
+    }
+
+    span {
+      @include typo($fsz: emCal(16, 14), $color: setColor(error), $fw: 300);
+      margin-top: emCal(16, 10);
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .btn.-normal {
+    display: block;
+    padding: emCal(16, 15);
+  }
+
+  $theme: 'secondary', 'third', 'fourth';
+
+  &.-colored {
+    background-color: setColor(primary);
+
+    h5 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .input-group {
+      input {
+        border-color: #fff;
+        color: #000;
+        background-color: setColor(primary);
+      }
+    }
+
+    .btn {
+
+
+      background-color: setColor(light);
+      color: $blueDark;
+
+      &:hover {
+        background-color: rgba(#fff, 0.8);
+        color: setColor(primary);
+      }
+    }
+  }
+}

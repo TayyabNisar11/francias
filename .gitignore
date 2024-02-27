@@ -1,0 +1,10 @@
+/.next
+/ArtWork
+/node_modules
+/public/*.DS_Store
+/public/assets/*.DS_Store
+/public/assets/images/*.DS_Store
+/public/assets/images/backgrounds/*.DS_Store
+.env
+.idea
+.vscode

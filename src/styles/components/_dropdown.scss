@@ -1,0 +1,58 @@
+.dropdown {
+    label {
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    select {
+        padding: .75rem;
+        display: block;
+        width: 100%;
+        font-size: .9rem;
+
+        background-color: #9eb0e6;
+        color: white;
+        border: none;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+        border-radius: 5px;
+
+        &:before {
+            content: "\f13a";
+            font-family: FontAwesome;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100%;
+            text-align: center;
+            font-size: 28px;
+            line-height: 45px;
+            color: $white;
+            background-color: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        &:hover {
+            &:before {
+                color: rgba(255, 255, 255, 0.6);
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+}
+
+.input-dropdown {
+    select {
+        @include input($pd: emCal(14, 15) emCal(14, 20), $width: 100%, $brd: emCal(14, 5));
+    }
+
+
+
+
+}

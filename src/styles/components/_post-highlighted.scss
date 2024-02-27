@@ -1,0 +1,147 @@
+.main-post {
+    min-height: 350px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+
+    &_image {
+        // min-height: 350px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+
+        @media only screen and (max-width: 1300px) {
+            align-items: center;
+            display: flex;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            min-height: auto;
+        }
+
+        &>img {
+            // height: 350px;
+            width: 100%;
+            border-radius: 10px 0 0 10px;
+
+            object-fit: scale-down;
+            background-color: #ffffff;
+            @media only screen and (max-width: 768px) {
+                height: auto;
+            }
+        }
+
+    }
+
+    &_content {
+        padding: 20px;
+        // height: 350px;
+        width: 100%;
+        position: relative;
+
+        &-category {
+            max-width: 100px;
+            position: absolute !important;
+            top: 20px;
+            right: 30px;
+            @include typo($fsz: emCal(16, 12), $fm: $bodyFont, $lh: 1, $fw: 700, $up: true);
+            position: relative;
+            z-index: 1;
+            margin-bottom: emCal(16, 20);
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: $redLight;
+        }
+
+        &-title {
+            margin-top: 15px;
+            padding: 0 !important;
+            font-size: 24px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            color: #1f1f1f;
+            font-weight: 700;
+            font-family: $bodyFont;
+            display: block;
+            // margin-bottom: emCal(16, 10);
+            @include link(setSchemaColor(gray, dark),
+                setColor(primary),
+                $fsz: emCal(16, 22),
+                $lh: emCal(16, 22),
+                $fw: 700,
+                $cpt: true);
+
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            @include overflowText(2);
+        }
+
+        &-date {
+            display: flex;
+            align-items: center;
+            margin: 5px 0px;
+
+            p {
+                display: inline-block;
+                margin-left: 10px;
+                margin-bottom: 5px;
+                @include typo($fsz: 15px, $lh: 1, $fw: 400, $color: setSchemaColor(gray, regular));
+            }
+
+            i {
+                color: setColor($redLight);
+                font-size: 22px;
+            }
+        }
+
+        &-description {
+            margin: 5px 0px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            line-height: 23px;
+            color: #3b3b3b;
+            font-weight: 400;
+            font-family: $bodyFont;
+
+
+            @media only screen and (max-width: 1300px) { 
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                line-clamp: 7;
+                -webkit-box-orient: vertical;
+            }
+            @media only screen and (max-width: 768px) { 
+                overflow: inherit;
+                display: inline-flex;
+                -webkit-line-clamp: inherit;
+                line-clamp: inherit;
+                -webkit-box-orient: inherit;
+            }
+
+
+        }
+
+        p {
+            padding-bottom: 0px !important;
+        }
+
+        &-link {
+            margin-top: 10px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            line-height: 23px;
+            color: #3b3b3b;
+            font-weight: 400;
+            font-family: $bodyFont;
+            text-decoration: underline;
+            color: $redLight;
+        }
+    }
+}
